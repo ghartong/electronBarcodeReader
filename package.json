@@ -2,12 +2,16 @@
   "name": "electron-barcode",
   "productName": "victory-check-in",
   "version": "0.1.0",
+  "description": "Victory Lodge Check-in App",
   "homepage": "./",
   "devDependencies": {
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "electron-installer-debian": "^0.7.1",
+    "electron-installer-dmg": "^0.2.1",
     "electron-prebuilt-compile": "1.7.9",
+    "electron-winstaller": "^2.6.3",
     "foreman": "^2.0.0"
   },
   "dependencies": {
@@ -24,7 +28,10 @@
     "electron": "electron .",
     "dev": "nf start",
     "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=public/assets/mac/victory.png.icns --prune=true --out=release-builds",
-    "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=public/assets/win/victory.png.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
-    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=public/assets/png/victory.png_128x128.png --prune=true --out=release-builds"
+    "package-win": "electron-packager . victory-check-in-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=public/assets/win/victory.png.ico --prune=true --out=release-builds --version-string.CompanyName=Glick --version-string.FileDescription=CE --version-string.ProductName=\"Victory Check-in App\"",
+    "package-linux": "electron-packager . victory-check-in-app --overwrite --asar=true --platform=linux --arch=x64 --icon=public/assets/png/victory.png_128x128.png --prune=true --out=release-builds",
+    "create-installer-mac": "electron-installer-dmg ./release-builds/victory-check-in-darwin-x64/victory-check-in.app victory-check-in-app --out=release-builds --overwrite --icon=public/assets/mac/victory.png.icns",
+    "create-installer-win": "node installers/windows/createinstaller.js",
+    "create-installer-linux": "electron-installer-debian --src release-builds/victory-check-in-app-linux-x64/ --arch amd64 --config debian.json"
   }
 }

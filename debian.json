@@ -1,0 +1,11 @@
+{
+    "dest": "release-builds/",
+    "icon": "public/assets/png/victory.png_128x128.png",
+    "categories": [
+      "Utility"
+    ],
+    "lintianOverrides": [
+      "changelog-file-missing-in-native-package"
+    ],
+    "productName": "victory-check-in-app"
+  }
