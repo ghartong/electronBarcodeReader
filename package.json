@@ -5,13 +5,13 @@
   "homepage": "./",
   "devDependencies": {
     "electron": "^1.4.14",
-    "foreman": "^2.0.0",
-    "react-scripts": "0.8.5"
+    "foreman": "^2.0.0"
   },
   "dependencies": {
     "jsonp-p": "^2.0.0",
     "react": "^15.6.2",
-    "react-dom": "^15.6.2"
+    "react-dom": "^15.6.2",
+    "react-scripts": "0.8.5"
   },
   "main": "src/electron-starter.js",
   "scripts": {
