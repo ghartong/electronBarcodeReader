@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import https from 'https'
 
@@ -54,7 +53,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src="assets/png/victory.png_128x128.png" className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to Victory Lodge</h1>
         </header>
         <p className="App-intro">
