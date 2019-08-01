@@ -13,10 +13,12 @@ class App extends Component {
 
   handleChange(e) {
     const that = this
-    if (e.target.value.length === 6) {
+    let targetVal = e.target.value.replace(/[^\d]/g, '')
+    console.log(targetVal)
+    if (targetVal.length === 6) {
       //alert('You entered: ' + e.target.value)
       //const url = 'https://oh.moriapp.com/mori/check_status?gl_number=' + + e.target.value
-      const url = 'https://ancient-badlands-23297.herokuapp.com/member/' + e.target.value
+      const url = 'https://ancient-badlands-23297.herokuapp.com/member/' + targetVal
       
       fetch(url)
       .then(response => {
